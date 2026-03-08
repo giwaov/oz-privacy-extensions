@@ -2,7 +2,7 @@
 pragma solidity ^0.8.20;
 
 import "@openzeppelin/contracts/access/Ownable.sol";
-import "@openzeppelin/contracts/utils/ReentrancyGuard.sol";
+import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
 
 /**
  * @title CommitRevealAuction
@@ -80,7 +80,7 @@ abstract contract CommitRevealAuction is Ownable, ReentrancyGuard {
         uint256 _commitDuration,
         uint256 _revealDuration,
         uint256 _reservePrice
-    ) Ownable(msg.sender) {
+    ) {
         require(_commitDuration > 0, "Commit duration must be > 0");
         require(_revealDuration > 0, "Reveal duration must be > 0");
         
@@ -144,7 +144,7 @@ abstract contract CommitRevealAuction is Ownable, ReentrancyGuard {
      * @param _amount The actual bid amount
      * @param _secret The secret used in commitment
      */
-    function revealBid(uint256 _amount, bytes32 _secret) external {
+    function revealBid(uint256 _amount, bytes32 _secret) external virtual {
         // Auto-transition to reveal phase if needed
         if (phase == AuctionPhase.Commit && block.timestamp >= commitDeadline) {
             phase = AuctionPhase.Reveal;

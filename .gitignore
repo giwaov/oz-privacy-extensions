@@ -1,6 +1,8 @@
 # Compiler output
 out/
 cache/
+cache-hardhat/
+artifacts/
 
 # Dependencies
 lib/
