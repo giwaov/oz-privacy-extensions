@@ -1,0 +1,42 @@
+{
+  "name": "oz-privacy-extensions",
+  "version": "1.0.0",
+  "description": "OpenZeppelin Privacy Extensions - Commit-Reveal and Vickrey Auction Contracts",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "test:foundry": "forge test -vvv",
+    "coverage": "hardhat coverage",
+    "lint": "solhint 'src/**/*.sol'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giwaov/oz-privacy-extensions.git"
+  },
+  "keywords": [
+    "ethereum",
+    "solidity",
+    "openzeppelin",
+    "auction",
+    "commit-reveal",
+    "vickrey",
+    "privacy"
+  ],
+  "author": "Victor Giwa (@0xgiwa)",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@openzeppelin/contracts": "^5.0.0",
+    "hardhat": "^2.22.0",
+    "solhint": "^4.5.0"
+  },
+  "bugs": {
+    "url": "https://github.com/giwaov/oz-privacy-extensions/issues"
+  },
+  "homepage": "https://github.com/giwaov/oz-privacy-extensions#readme"
+}

@@ -154,19 +154,28 @@ contract NFTVickreyAuction is VickreyAuction {
 
 ### Prerequisites
 
-- [Foundry](https://book.getfoundry.sh/getting-started/installation)
+- [Foundry](https://book.getfoundry.sh/getting-started/installation) or [Hardhat](https://hardhat.org/)
 - Node.js 18+
 
 ### Build
 
 ```bash
+# Foundry
 forge build
+
+# Hardhat
+npm install
+npm run compile
 ```
 
 ### Test
 
 ```bash
-forge test
+# Foundry tests
+forge test -vvv
+
+# Hardhat tests
+npm test
 ```
 
 ### Coverage
@@ -174,6 +183,10 @@ forge test
 ```bash
 forge coverage
 ```
+
+### CI/CD
+
+Tests run automatically on pull requests via GitHub Actions. See [.github/workflows/test.yml](.github/workflows/test.yml).
 
 ## Roadmap
 
